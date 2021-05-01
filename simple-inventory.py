@@ -41,4 +41,4 @@ if __name__ == "__main__" :
 
     hosts = [ generate_host(i) for i in range(1,5) ]
 
-    print(make_inventory(hosts))
+    print(json.dumps(make_inventory(hosts)))
