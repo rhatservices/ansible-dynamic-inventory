@@ -3,8 +3,10 @@
 import argparse
 import json
 
+
 class Host:
     name = ""
+
 
 def process_arguments():
     parser = argparse.ArgumentParser()
@@ -15,6 +17,7 @@ def process_arguments():
 
     return parser
 
+
 def generate_host(i):
     host = Host()
     host.name = "host{:d}".format(i)
@@ -23,6 +26,7 @@ def generate_host(i):
     }
 
     return host
+
 
 def make_inventory(hosts):
     return {
@@ -35,10 +39,11 @@ def make_inventory(hosts):
         }
     }
 
-if __name__ == "__main__" :
+
+if __name__ == "__main__":
     parser = process_arguments()
     parser.parse_args()
 
-    hosts = [ generate_host(i) for i in range(1,5) ]
+    hosts = [generate_host(i) for i in range(1, 5)]
 
     print(json.dumps(make_inventory(hosts)))
