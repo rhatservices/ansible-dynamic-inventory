@@ -1,0 +1,4 @@
+---
+libvirtURIs:
+  - "qemu+ssh://root@box01.lan.stderr.at/system"
+  - "qemu+ssh://root@box02.lan.stderr.at/system"
